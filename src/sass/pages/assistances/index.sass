@@ -1,0 +1,31 @@
+@import '../../config/general.sass'
+.p-assistances
+   &>.c-pagination
+      width: 100%
+   @mixin scroll-design($wide)
+      &::-webkit-scrollbar
+         width: $wide;
+      &::-webkit-scrollbar-track
+         background-color: $c_gray_cc
+      &::-webkit-scrollbar-thumb
+         background-color: lighten($c_beach,2%)
+         border-radius: 5px
+      &::-webkit-scrollbar-thumb:hover
+         background-color: darken($c_gray_default,20% )
+   @import '../../modules/assistances/index/head.sass'
+   @import '../../modules/assistances/index/table.sass'
+   @import '../../modules/assistances/index/footer.sass'
+   @include breakpoint(0 600px)
+      .container-table
+         display: none
+      .footer
+         display: none
+      .container-table+.c-pagination
+         display: none
+   @include breakpoint(600px)
+      .m-footer
+         display: none
+      .v-a-table
+         display: none
+      .c-pagination:last-child
+         display: none

@@ -1,0 +1,20 @@
+$header: 45px
+$footer: 0
+$maxHeigth: calc(100% - #{$footer})
+.e-main_page
+   height: 100%
+.e-main_page--content
+   max-height: calc(100% - #{$header})
+   height: 100%
+   display: flex
+.e-main_page--preloader
+   width: 100%
+   display: flex
+   justify-content: center
+   align-items: center
+.e-main_page--component
+   width: 100%
+   padding: 15px
+   // padding-bottom: 0
+   // max-height: calc(100% - #{$header})
+   overflow-y: auto

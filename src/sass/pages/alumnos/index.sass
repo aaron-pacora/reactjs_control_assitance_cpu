@@ -1,0 +1,17 @@
+@import '../../config/general.sass'
+
+.p-student
+   @import '../../modules/alumnos/index/filter.sass'
+   @import '../../modules/alumnos/index/table.sass'
+   @import '../../modules/alumnos/index/pagination.sass'
+   .p-student-header
+      display: flex
+      justify-content: space-between
+      margin-bottom: 10px
+      max-width: 690px
+      flex-direction: column
+      @include breakpoint(850px)
+         flex-direction: row
+         align-items: center
+      .e-title
+         margin: 0

@@ -1,0 +1,41 @@
+.p-types_user-form
+   margin-top: 15px
+   .p-types_user-form-button
+      max-width: 370px
+      display: flex
+      justify-content: space-between
+      margin-bottom: 20px
+      @include breakpoint(431px)
+         height: 31px
+      @include breakpoint(0 430px)
+         flex-direction: column
+         .c-button
+            align-self: flex-end
+            max-width: 180px
+   .p-types_user-form-tables
+      display: flex
+      .e-table:last-child
+         margin-left: 30px
+         @include breakpoint(0px 499px)
+            margin-left: 0
+      .e-table-item
+         .e-icon
+            &:last-child
+               width: 28px
+               margin-left: 10px
+         .e-icon--circle
+            cursor: pointer
+         input
+            transition: background 0.1s ease-in
+         &:hover
+            background: $c_gray_soft
+            input
+               background: $c_gray_soft
+         &.clicked
+            background: $c_gray_soft
+            input
+               background: $c_gray_soft
+      .e-table-item--icon_save
+         background: $c_green_20
+      .e-table-item--icon_cancel
+         background: $c_error_e3

@@ -1,0 +1,120 @@
+.l-menu
+   padding: 0
+   height: 100%
+   border-right: 0.5px solid $c_black_41
+   background: $c_white
+   transition: width 0.2s ease
+   position: absolute
+   height: calc(100% - 45px)
+   z-index: 10
+   @include breakpoint(0 650px)
+      max-width: 140px
+   @include breakpoint(651px)
+      position: relative
+      height: 100%
+   > div
+      border-right: 1px solid transparent
+   .l-menu_item
+      padding: 10px 15px
+      cursor: pointer
+      transition: background 0.2s ease
+      .l-menu_option
+         display: flex
+         align-items: center
+         .e-icon
+            margin-right: 5px
+            min-width: 23px
+            svg
+               transition: fill 0.1s ease
+               fill: $c_black_41
+         .l-menu_option-text
+            color: $c_black_41
+            font-size: 14px
+            opacity: 1
+            height: auto
+            transition: all 0.5s ease-out
+      &.e-card
+         border-top-left-radius: 0
+         border-bottom-left-radius: 0
+      .l-menu-submenu
+         padding-left: 28px
+         margin-top: 5px
+         display: none
+         .l-menu-submenu_list
+            font-size: 14px
+            display: flex
+            margin-bottom: 8px
+            color: $c_black_41
+            align-items: center
+            cursor: pointer
+            &:last-child
+               margin-bottom: 0
+            &:hover
+               color: $c_gray_primary
+            .l-menu-submenu_list_left_icon
+               width: 4px
+               height: 14px
+               background: $c_black_41
+               margin-right: 5px
+            &:not(.l-menu-submenu_list--selected)
+               padding-left: 9px
+         .l-menu-submenu_list--selected
+            font-weight: 600
+      .l-menu-submenu--open
+         display: block
+      &.l-menu_item--selected
+         position: relative
+         background: $c_gray_soft
+         &::before
+            content: ""
+            width: 3px
+            height: 100%
+            background: $c_gray_primary
+            position: absolute
+            top: 0
+            left: 0
+      &:hover
+         background: $c_gray_e0
+         .l-menu_option
+            .e-icon
+               svg
+                  fill: $c_gray_primary
+            .l-menu_option-text
+               color: $c_gray_primary
+   .l-menu_item--collapse
+      position: absolute
+      bottom: 0
+      width: calc(100% - 1px)
+      background: $c_gray_soft
+      .e-icon--back
+         display: none
+      @include breakpoint(651px)
+         display: none
+   &.l-menu_item--collapse--expanded
+      width: 100%
+      .l-menu_option-text
+         margin-right: 15px
+      .e-icon--forward
+         display: none
+      .e-icon--back
+         display: block
+   &:not(.l-menu_item--collapse--expanded)
+      @include breakpoint(0px 650px)
+         width: 55px
+      .l-menu_item
+         .l-menu_option
+            .l-menu_option-text
+               @include breakpoint(0px 650px)
+                  opacity: 0
+                  height: 0
+                  overflow: hidden
+.parent-menu
+   min-width: 45px
+   .l-menu-background
+      position: absolute
+      z-index: 8
+      width: 100%
+      height: calc(100% - 45px)
+      background: $c_black
+      transition: opacity 1s ease-out
+      opacity: 0.5

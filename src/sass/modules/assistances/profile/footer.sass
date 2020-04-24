@@ -1,0 +1,53 @@
+.p-footer
+   margin-top: 40px
+   display: flex
+   justify-content: space-around
+   align-items: flex-start
+   align-content: flex-start
+   @include breakpoint(0px 990px)
+      flex-wrap: wrap
+   @include breakpoint(0px 800px)
+      flex-wrap: nowrap
+      flex-direction: column
+      align-items: center
+   .p-event
+      max-height: 300px
+      overflow-y: auto
+      .e-table-full
+         width: 350px
+      .e-table-full__head
+
+      .e-table-full__body
+
+      .e-table-full__row
+
+      .e-table-full__cell
+         width: 37.5%
+         &:nth-child(1)
+            width: 25%
+   .p-status
+      align-self: flex-start
+      @include breakpoint(0px 800px)
+         align-self: center
+         margin-top: 30px
+      .e-table-full
+         width: 200px
+      .e-table-full__head
+
+      .e-table-full__body
+
+      .e-table-full__row
+
+      .e-table-full__cell
+         width: 20%
+         &:nth-child(1)
+            width: 60%
+   .p-status-final
+      display: flex
+      width: 200px
+      @include breakpoint(0px 990px)
+         margin-top: 30px
+      >div
+         width: 60%
+         &:last-child
+            width: 40%

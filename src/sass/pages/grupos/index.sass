@@ -1,0 +1,26 @@
+@import '../../config/general.sass'
+.p-groups
+   .g-title_header
+      display: flex
+      justify-content: space-between
+      width: 280px
+      margin-bottom: 25px
+      @include breakpoint(0 400px)
+         width: 250px
+         flex-direction: column
+         .c-button
+            align-self: flex-end
+            max-width: 150px
+   .e-table-item
+      .e-icon
+         &:last-child
+            margin-left: 10px
+      input
+         transition: background 0.1s ease-in
+      &:hover
+         input
+            background: $c_gray_soft
+   .e-table-item--icon_save
+      background: $c_green_20
+   .e-table-item--icon_cancel
+      background: $c_error_e3

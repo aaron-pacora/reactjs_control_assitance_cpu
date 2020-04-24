@@ -1,0 +1,34 @@
+.p-conf_cycle-body
+   margin: 20px
+   .c-input-form
+      margin: 20px
+      margin-left: 0
+      display: flex
+      justify-content: space-between
+      flex-direction: column
+      span
+         margin-bottom: 10px
+      @include breakpoint(500px)
+         width: 360px
+      @include breakpoint(550px)
+         flex-direction: row
+         align-items: center
+         span
+            margin-bottom: 0
+      .e-input
+         max-width: 210px
+   .c-input-date
+      @include breakpoint(500px)
+         width: 350px
+   .c-text
+      margin-top: 10px
+      font-size: 12px
+   .MuiSnackbar-root-5
+      > div
+         background: $c_green_20
+      span
+         font-weight: 600
+   &.error
+      .MuiSnackbar-root-5
+         > div
+            background: $c_error_e3

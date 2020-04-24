@@ -1,0 +1,39 @@
+{
+  "plugins": [
+     "inline-react-svg",
+      ["@babel/plugin-syntax-dynamic-import"],
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "sass"        : "./src/sass",
+          "sass_pages"  : "./src/sass/pages",
+          "sass_modules": "./src/sass/modules",
+          "components"  : "./src/components",
+          "icons"       : "./src/icons",
+          "utils"       : "./src/utils",
+          "views"       : "./src/views",
+          "r-redux"     : "./redux"
+        },
+        "cwd": "babelrc"
+      }
+    ],
+    [
+      "wrap-in-js",
+      {
+        "extensions": ["css$", "scss$","sass$"]
+      }
+    ],
+    [
+      "babel-plugin-styled-components",
+      {
+         "ssr": true,
+         "displayName": true,
+         "preprocess": false
+      }
+   ]
+  ],
+  "presets": ["next/babel"],
+  "ignore": []
+}

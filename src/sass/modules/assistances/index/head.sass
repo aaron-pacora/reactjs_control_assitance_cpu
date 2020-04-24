@@ -1,0 +1,94 @@
+$height-cell: 40px
+@mixin select_item
+   padding: 10px
+   color: #5A5A5A
+   border: none
+   font-size: 20px
+   height: $height-cell
+.head
+   display: flex
+   align-items: baseline
+   font-size: 18px !important
+   color: $c_txt_dark
+   @include breakpoint(0 650px)
+      flex-direction: column
+      justify-content: center
+      align-items: center
+   &__title
+      margin: 0 30px 40px 0
+      // font-size: 18px
+      font-weight: normal
+      @include breakpoint(0 650px)
+         font-size: 18px
+         margin: 0
+         margin-bottom: 15px
+   &__select
+      position: relative
+      background: none
+      border: none
+      outline: none
+   &__selected
+      height: $height-cell
+      width: 150px
+      background: $c_gray_soft
+      @include breakpoint(0 650px)
+         width: 130px
+         font-size: 16px
+      @include select_item
+      border-radius: 10px
+   &__options
+      z-index: 2010
+      background-color: $c_white
+      position: absolute
+      top: 100%
+      width: 100%
+      border: 1px solid $c_gray_soft
+      border-radius: 0 0 10px 10px
+      overflow: hidden
+      max-height: $height-cell*4
+      overflow-y: scroll
+      opacity: 0
+      @include scroll-design(10px)
+      transform: scaleX(1) scaleY(0)
+      transform-origin: top center
+      transition: 0.1s transform ease-in, 0.1s opacity ease-in
+   &__option
+      cursor: default
+      @include breakpoint(0 650px)
+         font-size: 15px
+      @include select_item
+   &__option:hover,&__option:focus
+      background-color: $c_gray_soft
+      transition: 0.1s background-color ease-out
+      border: none
+.container-select
+   position: relative
+   display: flex
+   align-items: center
+   &:focus-within
+
+.svg-arrow
+   position: absolute
+   width: 30px
+   height: 30px
+   pointer-events: none
+   right: 10px
+   fill: $c_gray
+   transition: 0.2s transform ease-in-out
+   @include breakpoint(0 650px)
+      width: 24px
+      height: 24px
+
+.show-options
+   ~.svg-arrow
+      transform: rotate(-180deg)
+   .head__options
+      // display: block
+      transform: scaleX(1) scaleY(1)
+      opacity: 1
+.p-search
+   .p-search__field
+
+   .p-search__icon
+      width: 35px
+      height:  35px

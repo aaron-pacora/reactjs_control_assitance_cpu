@@ -1,0 +1,72 @@
+.footer
+   margin-top: 20px
+   width: 100%
+   display: flex
+   justify-content: space-between
+   .footer-total
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      width: 50%
+      .footer__total
+         width: 250px
+         display: flex
+
+         >div
+            width: 100%
+            &:last-child
+               width: 35%
+      .footer__detail
+         opacity: 0
+         .e-table-full
+            overflow-y: hidden
+            min-width: 20z0px
+         .e-table-full__head
+            color: $c-white
+         .e-table-full__body
+            height: 200px !important
+            .e-table-full__cell:first-child
+               text-align: left
+         .e-table-full__row
+         .e-table-full__cell
+            border: 1px solid $c-beach
+            padding: 3px 5px
+   .footer-portal
+      position: fixed
+      top: 45px
+      left: calc( 100vw - 500px)
+      width: 500px
+      transition: top 0.4s,left 0.4s
+   .footer-modal
+      justify-content: center
+      min-height: 220px
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      .footer-modal__title
+         width: 100%
+         background: $c-beach
+         color: $c-white
+         display: flex
+         justify-content: space-around
+         align-items: center
+         .svg
+            fill: $c-white
+      .footer-modal__content
+         display: flex
+         justify-content: space-around
+         .footer-modal__buttons
+            margin-right: 20px
+            width: 50px
+            display: flex
+            justify-content: center
+            label
+               width: 30%
+               display: flex
+         .footer-modal__description
+      .footer-modal__button
+         background: $c_yellow_49
+         color: $c-white
+         font-size: 12px
+      .circular-progress

@@ -1,0 +1,86 @@
+@import './general.sass'
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	font-family: sans-serif
+
+html
+	padding: 0
+	height: 100%
+
+svg
+	width: 100%
+	height: 100%
+
+.ds-flex
+	display: flex
+	align-items: center
+	&.column
+		flex-direction: column
+	&.row
+		flex-direction: row
+	&.end
+		justify-content: flex-end
+	&.center
+		justify-content: center
+	&.between
+		justify-content: space-between
+	&.around
+		justify-content: space-around
+	&.stretch
+		align-self: stretch
+	&.align-end
+		align-items: flex-end
+	&.align-start
+		align-items: flex-start
+	&.align-baseline
+		align-items: baseline
+
+/* FONT SIZE*/
+p
+	line-height: 140%
+	letter-spacing: 0.2px
+	color: $c_txt_dark
+span.requerid
+	color: $c_gray_primary
+	padding-left: 5px
+table tbody td
+	color: $c_txt_dark
+input
+   border: 0
+textarea:focus,input:focus
+   outline: none
+
+a
+	text-decoration: none
+	cursor: pointer
+
+li
+	list-style: none
+
+i
+	font-size: 0
+	display: block
+
+ul.parsley-errors-list
+	font-size: 12px
+
+	li
+		color: red
+		padding-top: 5px
+
+body
+   height: 100%
+#__next
+   height: 100%
+// body::-webkit-scrollbar-track
+//     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+
+@import './libs/normalize'
+@import './libs/font_face'
+@import '../elements/index.sass'
+
+@import '../layout/home/index.sass'
+

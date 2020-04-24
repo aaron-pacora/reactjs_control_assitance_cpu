@@ -1,0 +1,28 @@
+@import '../colors.scss'
+
+.c-button
+   position: relative
+   display: inline-flex
+   min-height: 30px
+   min-width: 80px
+   border-radius: 5px
+   padding: 6px 16px
+   overflow: hidden
+   align-items: center
+   line-height: 19px
+   color: $c_white
+   cursor: pointer
+   transition: background-color 0.2s ease
+   font-size: 14px
+   justify-content: center
+   background-color: $c_primary
+   &.disabled
+      background-color: $c_gray_cc
+      cursor: default
+      pointer-events: none
+   &:hover
+      background-color: $c_secundary
+   .e-icon
+      margin-left: 5px
+      svg
+         fill: $c_white

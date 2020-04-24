@@ -1,0 +1,58 @@
+.no-select
+   -moz-user-select: none
+   -khtml-user-select: none
+   -webkit-user-select: none
+   -ms-user-select: none
+   user-select: none
+.display-none
+   display: none
+.bg-primary--reverse
+   color: $c-white
+   background-color: $c-beach
+.bg--gray
+   background-color: $c_gray_soft
+.h-pd
+   padding: 5px 3px
+.h-txt--primary
+   color: $c_txt_dark
+.h-txt--center
+   text-align: center
+.h-txt--left
+   text-align: left
+.h-txt-right
+   text-align: right
+
+.h-border--primary
+   border: 1px solid $c-beach
+.h-message--info
+   margin-top: 20px
+   color: $c_txt_dark
+   font-size: 16px
+
+.h-scroll-design
+   &::-webkit-scrollbar
+      width: 10px
+   &::-webkit-scrollbar-track
+      background-color: $c_gray_cc
+   &::-webkit-scrollbar-thumb
+      background-color: $c_beach
+      border-radius: 5px
+   &::-webkit-scrollbar-thumb:hover
+      background-color: darken($c_gray_default,20% )
+      
+.c-circular-progress
+   color: $c-beach
+   margin-top: 20px
+   width: 100% !important
+.c-circular-progress-container
+   display: flex
+   justify-content: center
+   align-content: center
+   min-height: 400px
+   width: 100%
+   .c-circular-progress
+      margin: auto
+.c-circular-progress--small
+   margin: 0 auto
+   width: 20px !important
+   height: 20px

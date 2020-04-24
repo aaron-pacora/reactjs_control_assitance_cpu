@@ -1,0 +1,28 @@
+.p-users-body
+   margin-top: 15px
+   max-width: 370px
+   .p-users-body-button
+      display: flex
+      justify-content: space-between
+      margin-bottom: 20px
+      @include breakpoint(401px)
+         height: 31px
+      @include breakpoint(0 400px)
+         flex-direction: column
+         .c-button
+            align-self: flex-end
+            max-width: 150px
+   .e-table-item
+      .e-icon
+         &:last-child
+            margin-left: 10px
+      input
+         transition: background 0.1s ease-in
+         height: 100%
+      &:hover
+         input
+            background: $c_gray_soft
+   .e-table-item--icon_save
+      background: $c_green_20
+   .e-table-item--icon_cancel
+      background: $c_error_e3

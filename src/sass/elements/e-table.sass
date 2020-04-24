@@ -1,0 +1,88 @@
+.e-table
+   max-width: 750px
+   display: inline-block
+   @include breakpoint(0px 499px)
+      width: 100%
+   .e-table-header
+      border: 1px solid $c_beach
+      padding: 5px 3px
+      color: $c_beach
+      display: flex
+      > div
+         text-align: center
+         width: 100%
+         padding: 0 5px
+      @include breakpoint(0px 499px)
+         display: none
+         border: none
+   .e-table-body
+      border: 1px solid $c_beach
+      padding: 5px 3px
+      color: $c_black
+      > div
+         text-align: center
+         width: 100%
+         padding: 0 5px
+   .e-table-content
+      border: 1px solid $c_beach
+      border-top: none
+      @include breakpoint(0px 499px)
+         border: none
+   .e-table-item
+      padding: 5px 3px
+      color: $c_txt_dark
+      display: flex
+      transition: background 0.1s ease-in
+      font-size: 15px
+      > div
+         display: inline-flex
+         align-items: center
+         width: 100%
+         padding: 0 5px
+      &:hover
+         background: $c_gray_soft
+      @include breakpoint(0px 499px)
+         display: flex
+         flex-direction: column
+         border: 1px solid $c_beach
+         margin-bottom: 15px
+         border-radius: 5px
+         min-width: 225px
+         align-items: center
+         box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12)
+         > div
+            margin-bottom: 8px
+            justify-content: center
+         .e-input--line
+            margin-bottom: 15px
+         .e-icon
+            display: none
+         .e-icon--circle
+            display: flex
+   .e-table-item--icon
+      .e-icon
+         cursor: pointer
+         svg
+            fill: $c_txt_dark
+   .e-table-item--min
+      min-width: 40px
+      max-width: 50px
+   .e-table-item--medium
+      min-width: 120px
+      max-width: 140px
+   .e-table-item--max
+      min-width: 160px
+      max-width: 180px
+      word-break: break-word
+   .e-table-item--email
+      min-width: 225px
+   .e-table-item--center
+      justify-content: center
+      text-align: center
+   .e-table-item--left
+      justify-content: flex-start
+      text-align: left
+   .e-table-item--right
+      justify-content: flex-end
+      text-align: right
+   .e-table-content

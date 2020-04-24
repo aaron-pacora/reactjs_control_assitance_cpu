@@ -1,0 +1,28 @@
+@import '../colors.scss'
+
+.c-pagination
+   width: 650px
+   border: 1px solid $c_beach
+   border-top: none
+   display: flex
+   justify-content: space-between
+   padding: 0px 15px
+   color: $c_txt
+   .c-pagination--numbers
+      display: flex
+      .c-pagination--num
+         width: 30px
+         height: 100%
+         display: inline-flex
+         justify-content: center
+         align-items: center
+         cursor: pointer
+         font-size: 14px
+         &.selected
+            background: $c_gray_cc
+   .c-pagination-option
+      padding: 5px 0
+      font-size: 14px
+      cursor: pointer
+      width: 50px
+      text-align: end
